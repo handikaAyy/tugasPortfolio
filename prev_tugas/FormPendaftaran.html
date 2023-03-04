@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/prev.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Prompt:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navigasi flex">
+            <nav class="flex">
+              <!-- * -------------title name ------- -->
+              <div class="logo-name">
+                <h2>AY-ANO</h2>
+              </div>
+              <!-- * -------------title name ------- -->
+    
+              <div class="setting flex">
+                <ul class="nav-menu slide flex">
+                  <li>
+                    <a class="nav-link " href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="../projek sekolah.html">Tugas Projeck</a>
+                  </li>
+                </ul>
+                <div class="mode flex">
+                  <input type="checkbox" name="input-mode" id="input-mode" />
+                  <ion-icon class="icon-day" name="sunny-outline"></ion-icon>
+                  <ion-icon
+                    class="icon-night d-none"
+                    name="moon-outline"
+                  ></ion-icon>
+                </div>
+                <div class="menu flex">
+                  <input type="checkbox" name="input-menu" id="input-menu" />
+                  <ion-icon class="icon-on" name="grid-outline"></ion-icon>
+                  <ion-icon class="icon-off d-none" name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="header">
+            <h1>Form Pendaftaran HTML</h1>
+          </div>
+          <div class="preview">
+            <div class="img_box_2">
+              <div class="tombol">
+                <button class="btn_left d-none" onclick="left()"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <button class="btn_right" onclick="right()"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+              </div>
+              <div class="con_img">
+                <img src="img/pendaftaran1.png" alt="">
+                <img src="img/pendaftaran2.png" alt="">
+
+              </div>
+            </div>
+            <div class="live_prev">
+              <a href="http://ayanoh.infinityfreeapp.com/handikaTugas/pendaftaran/" target="_blank" class="lp flex">Live Preview</a>
+            </div>
+            <div class="containerer">
+              <div class="content">
+                <h3 class="head_code">HTML code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+                      <!DOCTYPE html>
+                      <html lang="en">
+                      <head>
+                          <meta charset="UTF-8">
+                          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                          <link rel="stylesheet" href="style.css">
+                          <title>Pendaftaran</title>
+                      </head>
+                      <body>
+                          <div class="main ">
+                              <nav class="navigasi flex">
+                                  <div class="nav-content">
+                                      <h1>Form pendaftaran</h1>
+                                  </div>
+                              </nav>
+                              <form action="" class="form">
+                                      <div class="card">
+                                          <div class="card-body">
+                                            <form action="#">
+                                              <div class="form-group">
+                                                <label for="username">Jalur Pendaftaran</label>
+                                                <select name="jalur" class="form-control" id="jalur">
+                                                  <option value="zoansi">Zonasi</option>
+                                                  <option value="zoansi">Afirmasi</option>
+                                                  <option value="prestasi">Prestasi</option>
+                                                </select>
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="skp">Sekolah Pilihan Pertama</label>
+                                                <select name="skp" class="form-control" id="skp">
+                                                  <option value="SMK 1">SMKN 1 MAGELANG</option>
+                                                  <option value="SMK 2">SMKN 2 MAGELA NG</option>
+                                                  <option value="SMK 3">SMKN 3 MAGELANG</option>
+                                                </select>
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="skd">Sekolah Pilihan Kedua</label>
+                                                  <select name="skd" class="form-control" id="skd">
+                                                    <option value="SMK 1">SMKN 1 MAGELANG</option>
+                                                    <option value="SMK 2">SMKN 2 MAGELA NG</option>
+                                                    <option value="SMK 3">SMKN 3 MAGELANG</option>
+                                                  </select>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="card content 2">
+                                          <div class="card-header">
+                                            <div class="text-header">A. BIODATA PENDAFTARAN</div>
+                                          </div>
+                                          <div class="card-body">
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="NIK" class="form__field" type="input">
+                                                  <label class="form__label" for="NIK">NIK</label>
+                                              </div>
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="NISN" class="form__field" type="input">
+                                                  <label class="form__label" for="NISN">NISN</label>
+                                              </div>
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="Nama Lengkap" class="form__field" type="input">
+                                                  <label class="form__label" for="Nama Lengkap">Nama Lengkap</label>
+                                              </div>
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="Tempat Lahir" class="form__field" type="input">
+                                                  <label class="form__label" for="Tempat Lahir">Tempat Lahir</label>
+                                              </div>
+                                              <div class="form-group">
+                                                  <label class="margin-top" for="skd">Tanggal Lahir</label>
+                                                  <div class="form-control">
+                                                      <div class="tanggal">
+                                                        <select name="skd" class="tgl" id="skd">
+                                                          <option value="SMK 1">SMKN 1 MAGELANG</option>
+                                                          <option value="SMK 2">SMKN 2 MAGELA NG</option>
+                                                          <option value="SMK 3">SMKN 3 MAGELANG</option>
+                                                        </select>
+                                                        <select name="skd" class="tgl" id="skd">
+                                                          <option value="SMK 1">SMKN 1 MAGELANG</option>
+                                                          <option value="SMK 2">SMKN 2 MAGELA NG</option>
+                                                          <option value="SMK 3">SMKN 3 MAGELANG</option>
+                                                        </select>
+                                                        <select name="skd" class="tgl" id="skd">
+                                                          <option value="SMK 1">SMKN 1 MAGELANG</option>
+                                                          <option value="SMK 2">SMKN 2 MAGELA NG</option>
+                                                          <option value="SMK 3">SMKN 3 MAGELANG</option>
+                                                        </select>
+                                                      </div>
+                                                  </div>
+                                                  
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="margin-top" for="skd">Jenis Kelamin</label>
+                                                <div class="form-control">
+                                                      <select name="skd" class="tgl" id="skd">
+                                                        <option value="SMK 1">Laki-Laki</option>
+                                                        <option value="SMK 2">Perempuan</option>
+                                                        <option value="SMK 2">Trasblender</option>
+                                                      </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="margin-top" for="skd">Agama</label>
+                                                <div class="form-control">
+                                                      <select name="skd" class="tgl" id="skd">
+                                                        <option value="SMK 1">Islam</option>
+                                                        <option value="SMK 2">Kristen</option>
+                                                        <option value="SMK 2">Hindhu</option>
+                                                        <option value="SMK 2">Budha</option>
+                                                        <option value="SMK 2">Konghucu</option>
+                      
+                                                      </select>
+                                                </div>
+                                            </div>
+                                            <div class="form__group field">
+                                              <input required="" placeholder="sekolah_asal  " class="form__field" type="input">
+                                              <label class="form__label" for="sekolah_asal">Sekolah Asal</label>
+                                          </div>
+                                          <div class="form__group field">
+                                            <input required="" placeholder="ortu" class="form__field" type="input">
+                                            <label class="form__label" for="ortu">Nama orang tua/ wali</label>
+                                        </div>
+                                          </div>
+                                        </div>
+                                        <!-- * ------------------------------------------------------------- -->
+                                        <div class="card content3">
+                                          <div class="card-header">
+                                            <div class="text-header">B. ALAMAT TEMPAT TINGGAL</div>
+                                          </div>
+                                          <div class="card-body">
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="jalan" class="form__field" type="input">
+                                                  <label class="form__label" for="jalan">Jalan</label>
+                                              </div>
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="dusun" class="form__field" type="input">
+                                                  <label class="form__label" for="dusun">Dusun</label>
+                                              </div>
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="rt" class="form__field" type="input">
+                                                  <label class="form__label" for="rt">Rt/Rw</label>
+                                              </div>
+                                              <div class="form__group field">
+                                                  <input required="" placeholder="Desa" class="form__field" type="input">
+                                                  <label class="form__label" for="Desa">Desa</label>
+                                              <div class="form__group field">
+                                              <input required="" placeholder="Kecamatan" class="form__field" type="input">
+                                              <label class="form__label" for="Kecamatan">Kecamatan</label>
+                                              </div>
+                                              <div class="form__group field">
+                                               <input required="" placeholder="Koordinat" class="form__field" type="input">
+                                               <label class="form__label" for="Koordinat">Titik Koordinat Tempat Tinggal</label>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        
+                              </form>
+                             
+                          </div>
+                      
+                      </body>
+                      </html>
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <h3 class="head_code">CSS code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+                      <xmp class="coding">
+                        *{
+                          box-sizing:border-box;
+                          margin: 0;
+                          padding: 0;
+                      }
+                      body{
+                          display: flex;
+                          width: 100vw;
+                          overflow-x: hidden;
+                          flex-direction: column;
+                          align-items: center;
+                      }
+                      .navigasi{
+                          width: 100vw;
+                          background-color: aquamarine;
+                          position: fixed;
+                          top: 0;
+                          z-index: 10;
+                          height: 50px;
+                      }
+                      .nav-content{
+                          width: calc(100vw - 80px);
+                          max-width: 1280px;
+                      }
+                      .main {
+                          width: 100vw;
+                          max-width: 1280px;
+                          display: flex;
+                          overflow-x: hidden;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: center;
+                          padding-top: 70px;
+                      }
+                      .content1{
+                          width: fit-content;
+                      }
+                      
+                      .flex{
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                      }
+                      .form{
+                          width: 100%;
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: center;
+                      }
+                      
+                      .card {
+                          width: calc(100vw - 100px);
+                          max-width: 1000px;
+                          border: 1px solid #ccc;
+                          border-radius: 4px;
+                          box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+                          overflow: hidden;
+                          margin: 10px;
+                        }
+                        
+                        .card-header {
+                          background-color: #333;
+                          padding: 16px;
+                          text-align: center;
+                        }
+                        
+                        .card-header .text-header {
+                          margin: 0;
+                          font-size: 18px;
+                          color: rgb(255, 255, 255);
+                        }
+                        
+                        .card-body {
+                          padding: 16px;
+                        }
+                        
+                        .form-group {
+                          margin-bottom: 10px;
+                        }
+                        
+                        .form-group label {
+                          display: block;
+                          font-size: 14px;
+                          color: #333;
+                          font-weight: bold;
+                          margin-bottom: 1px;
+                        }
+                        
+                        .form-group input[type="text"],
+                        .form-group input[type="email"],
+                        .form-group input[type="password"],
+                        .form-group select {
+                          width: 100%;
+                          padding: 8px;
+                          font-size: 14px;
+                          border: 1px solid #ccc;
+                          border-radius: 4px;
+                        }
+                        .form__group {
+                          position: relative;
+                          padding: 20px 0 0;
+                          margin-top: 10px;
+                          width: 100%;
+                        }
+                        
+                        .form__field {
+                          font-family: inherit;
+                          width: 100%;
+                          border: none;
+                          border-bottom: 2px solid #9b9b9b;
+                          outline: 0;
+                          font-size: 17px;
+                          padding: 7px 0;
+                          background: transparent;
+                          transition: border-color 0.2s;
+                        }
+                        
+                        .form__field::placeholder {
+                          color: transparent;
+                        }
+                        
+                        .form__field:placeholder-shown ~ .form__label {
+                          font-size: 17px;
+                          cursor: text;
+                          top: 20px;
+                        }
+                        
+                        .form__label {
+                          position: absolute;
+                          top: 0;
+                          display: block;
+                          transition: 0.2s;
+                          font-size: 17px;
+                          color: #9b9b9b;
+                          pointer-events: none;
+                        }
+                        
+                        .form__field:focus {
+                          padding-bottom: 6px;
+                          font-weight: 700;
+                          border-width: 3px;
+                          border-image: linear-gradient(to right, #116399, #38caef);
+                          border-image-slice: 1;
+                        }
+                        
+                        .form__field:focus ~ .form__label {
+                          position: absolute;
+                          top: 0;
+                          display: block;
+                          transition: 0.2s;
+                          font-size: 17px;
+                          color: #38caef;
+                          font-weight: 700;
+                        }
+                        
+                        .form__field:required, .form__field:invalid {
+                          box-shadow: none;
+                        }
+                        .tanggal{
+                          width: 100%;
+                          display: flex;
+                          justify-content: space-between;
+                        }
+                       .margin-top{
+                        margin-top: 30px;
+                       }
+                      </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+        
+          </div>
+    <div class="line"></div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../assets/script/prev.js"></script>
+</body>
+</html>

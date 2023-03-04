@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/prev.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Prompt:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navigasi flex">
+            <nav class="flex">
+              <!-- * -------------title name ------- -->
+              <div class="logo-name">
+                <h2>AY-ANO</h2>
+              </div>
+              <!-- * -------------title name ------- -->
+    
+              <div class="setting flex">
+                <ul class="nav-menu slide flex">
+                  <li>
+                    <a class="nav-link " href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="../projek sekolah.html">Tugas Projeck</a>
+                  </li>
+                </ul>
+                <div class="mode flex">
+                  <input type="checkbox" name="input-mode" id="input-mode" />
+                  <ion-icon class="icon-day" name="sunny-outline"></ion-icon>
+                  <ion-icon
+                    class="icon-night d-none"
+                    name="moon-outline"
+                  ></ion-icon>
+                </div>
+                <div class="menu flex">
+                  <input type="checkbox" name="input-menu" id="input-menu" />
+                  <ion-icon class="icon-on" name="grid-outline"></ion-icon>
+                  <ion-icon class="icon-off d-none" name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="header">
+            <h1>Kalkulator PeHaPe</h1>
+          </div>
+          <div class="preview">
+            <div class="img_box">
+              <img src="img/kalku.png" alt="">
+            </div>
+            <div class="live_prev">
+              <a href="http://ayanoh.infinityfreeapp.com/handikaTugas/kalku/" target="_blank" class="lp flex">Live Preview</a>
+            </div>
+            <div class="containerer">
+              <div class="content">
+                <h3 class="head_code">PHP code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+      <?php 
+      if(isset($_POST["submit"])){
+          $hasil = 0;
+          $bil1 = doubleval($_POST["bil1"]);
+          $bil2 = doubleval($_POST["bil2"]);
+          $operator = $_POST["op"];
+          switch($operator){
+              case "tambah" :
+                  $hasil = $bil1 + $bil2;
+                  break;
+              case "kurang"   :
+                  $hasil = $bil1 - $bil2;
+                  break;
+              case "kali"     :
+                  $hasil = $bil1 * $bil2;
+                  break;
+              case "bagi" :
+                  $hasil = $bil1 / $bil2;
+                  break;
+              default :
+                  $hasii = 0;
+          }
+        
+          
+      }
+      if(isset($_POST["reset"])){
+          $bil1 = "";
+          $bil2 = "";
+      }
+      
+      
+      ?>
+      
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Mynerve&family=Poppins:wght@200&family=Righteous&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
+          <title>kalkulator</title>
+      </head>
+      <body>
+          <div class="box">
+              <form action="" method="POST">
+              <button class="reset" type="submit"><ion-icon name="refresh-circle"></ion-icon></button>
+      
+                  <div class="head">
+                      <h2>kalku<span> lator</span></h2>
+                  </div>
+                  <div class="capt">
+                      <p>www.ahihihi.co.id</p>  
+                  </div>
+                  <input type="number" class="bil1" name="bil1" id="bil1" <?php 
+                  if(isset($bil1)){
+                      echo("value='".$bil1."'");
+                  }else{
+                      echo("value=''");
+      
+                  }
+                  ?>>
+                  <input type="number" class="bil2" name="bil2" id="bil2"
+                  <?php 
+                  if(isset($bil1)){
+                      echo("value='".$bil2."'");
+                  }else{
+                      echo("value=''");
+                  }
+                  ?>>
+                  <div class="operator">
+                      <select name="op" id="op" class="op">
+                          <option value="tambah">+</option>
+                          <option value="kurang">-</option>
+                          <option value="kali">x</option>
+                          <option value="bagi">:</option>
+                      </select>
+                      <button class="sub" name="submit" type="submit">HASIL</button>
+                  </div>
+      
+                  <input type="number" class="hasil" name="hasil" id="hasil" <?php 
+                 if(isset($hasil)){
+                   echo("value = '".$hasil."'");}else{
+                      echo("value = '000'");
+                   }
+                  ?>
+      
+              </form>
+          </div>
+          <script src="main.js"></script>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </body>
+      </html> 
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <h3 class="head_code">PHP code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+      <?php 
+      if(isset($_POST["submit"])){
+          $hasil = 0;
+          $bil1 = doubleval($_POST["bil1"]);
+          $bil2 = doubleval($_POST["bil2"]);
+          $operator = $_POST["op"];
+          switch($operator){
+              case "tambah" :
+                  $hasil = $bil1 + $bil2;
+                  break;
+              case "kurang"   :
+                  $hasil = $bil1 - $bil2;
+                  break;
+              case "kali"     :
+                  $hasil = $bil1 * $bil2;
+                  break;
+              case "bagi" :
+                  $hasil = $bil1 / $bil2;
+                  break;
+              default :
+                  $hasii = 0;
+          }
+        
+          
+      }
+      if(isset($_POST["reset"])){
+          $bil1 = "";
+          $bil2 = "";
+      }
+      
+      
+      ?>
+      
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Mynerve&family=Poppins:wght@200&family=Righteous&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
+          <title>kalkulator</title>
+      </head>
+      <body>
+          <div class="box">
+              <form action="" method="POST">
+              <button class="reset" type="submit"><ion-icon name="refresh-circle"></ion-icon></button>
+      
+                  <div class="head">
+                      <h2>kalku<span> lator</span></h2>
+                  </div>
+                  <div class="capt">
+                      <p>www.ahihihi.co.id</p>  
+                  </div>
+                  <input type="number" class="bil1" name="bil1" id="bil1" <?php 
+                  if(isset($bil1)){
+                      echo("value='".$bil1."'");
+                  }else{
+                      echo("value=''");
+      
+                  }
+                  ?>>
+                  <input type="number" class="bil2" name="bil2" id="bil2"
+                  <?php 
+                  if(isset($bil1)){
+                      echo("value='".$bil2."'");
+                  }else{
+                      echo("value=''");
+                  }
+                  ?>>
+                  <div class="operator">
+                      <select name="op" id="op" class="op">
+                          <option value="tambah">+</option>
+                          <option value="kurang">-</option>
+                          <option value="kali">x</option>
+                          <option value="bagi">:</option>
+                      </select>
+                      <button class="sub" name="submit" type="submit">HASIL</button>
+                  </div>
+      
+                  <input type="number" class="hasil" name="hasil" id="hasil" <?php 
+                 if(isset($hasil)){
+                   echo("value = '".$hasil."'");}else{
+                      echo("value = '000'");
+                   }
+                  ?>
+      
+              </form>
+          </div>
+          <script src="main.js"></script>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </body>
+      </html> 
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+        
+          </div>
+    <div class="line"></div>
+
+    </div>
+</body>
+</html>

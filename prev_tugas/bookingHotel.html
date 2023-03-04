@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/prev.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Prompt:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navigasi flex">
+            <nav class="flex">
+              <!-- * -------------title name ------- -->
+              <div class="logo-name">
+                <h2>AY-ANO</h2>
+              </div>
+              <!-- * -------------title name ------- -->
+    
+              <div class="setting flex">
+                <ul class="nav-menu slide flex">
+                  <li>
+                    <a class="nav-link " href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="../projek sekolah.html">Tugas Projeck</a>
+                  </li>
+                </ul>
+                <div class="mode flex">
+                  <input type="checkbox" name="input-mode" id="input-mode" />
+                  <ion-icon class="icon-day" name="sunny-outline"></ion-icon>
+                  <ion-icon
+                    class="icon-night d-none"
+                    name="moon-outline"
+                  ></ion-icon>
+                </div>
+                <div class="menu flex">
+                  <input type="checkbox" name="input-menu" id="input-menu" />
+                  <ion-icon class="icon-on" name="grid-outline"></ion-icon>
+                  <ion-icon class="icon-off d-none" name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="header">
+            <h1>Booking Hotel PHP</h1>
+          </div>
+          <div class="preview">
+            <div class="img_box_2">
+              <div class="tombol">
+                <button class="btn_left d-none" onclick="left()"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <button class="btn_right" onclick="right()"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+              </div>
+              <div class="con_img">
+                <img src="img/b.png" alt="">
+                <img src="img/b2.png" alt="">
+
+              </div>
+            </div>
+            <div class="live_prev">
+              <a href="http://ayanoh.infinityfreeapp.com/handikaTugas/booking/boking.php" target="_blank" class="lp flex">Live Preview</a>
+            </div>
+            <div class="containerer">
+              <div class="content">
+                <h3 class="head_code">PHP code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+                      <?php 
+function hasil(){
+    $tanggal = $_POST["tanggal"];
+    $namcus = $_POST["namcus"];
+    $noId = $_POST["noId"];
+    $durasi = $_POST['durasi'];
+    $type = $_POST['type'];
+    $deluxe = 850000;
+    $superior = 500000;
+
+    error_reporting(0);
+        foreach ($namcus as $key => $val){
+            ?>
+            <table border="0" width="500" cellpadding = "1" cellspacing = "1">
+                <tr>
+                    <td><?= "&nbsp tanggal booking"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td><?= "&nbsp" . $tanggal?></td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp Nama Customer"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td><?= "&nbsp" . $namcus[$key]?></td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp no identitas"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td><?= "&nbsp" . $noId[$key]?></td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp type kamar"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td><?= "&nbsp" . $type?></td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp durasi penginapan"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td><?= "&nbsp" . $durasi . " hari"?></td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp no identitas"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td><?= "&nbsp" . $noId?></td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp no diskon"?></td>
+                    <td><?= "&nbsp : "?></td>
+                    <td>
+                        <?php 
+                           if($type){
+                            if($durasi == ""){
+                                echo "durasi belum diisi";
+                            }else if($type == "deluxe"){
+                                $hasil = $deluxe * $durasi;
+                                $hasil;
+                            }else if($type =="superior"){
+                                $hasil = $superior * $durasi;
+                                $hasil;
+                            }
+            
+                            if($hasil > 2000000){
+                                $diskon = (20/100)*$hasil;
+                                $total = $hasil-$diskon;
+                                echo "&nbsp potongan diskon 20%";
+            
+                            }else if($hasil > 1500000){
+                                $diskon = (10/100)*$hasil;
+                                $total = $hasil-$diskon;
+                                echo "&nbsp potongan diskon 10%";
+            
+                            }else{
+                                echo "&nbsp anda tidak berhak menadpa potongan diskon ";
+                            }
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><?= "&nbsp total bayar"?></td>
+                    <td><?= "&nbsp"?></td>
+                    <td>
+                        <?php
+                        if($type){
+                            if($durasi == ""){
+                                echo "durasi belum diisi";
+                            }elseif($type == "1"){
+                                $hasil = $deluxe * $durasi;
+                                $hasil;
+                            }else if($type == "2"){
+                                $hasil = $superior * $durasi;
+                                $hasil;
+                            }
+
+                            if($hasil > 2000000){
+                                $diskon = (20/100)*$hasil;
+                                $total = $hasil-$diskon;
+                                echo "&nbsp Rp.".$total;
+            
+                            }else if($hasil > 1500000){
+                                $diskon = (10/100)*$hasil;
+                                $total = $hasil-$diskon;
+                                echo "&nbsp Rp.".$total;
+                            }else{
+                                echo "&nbsp Rp.". $hasil;
+                            }
+                        }
+                        ?>
+                    </td>
+                </tr>
+
+            </table>
+            <?php 
+         
+        }
+    
+
+}
+?>
+
+<html>
+    <form method="POST" action="" name="formpost">
+        <table width = "500" border="1" cellpadding = "1" cellspacing ="1" align="center">
+            <tr>
+                <th><h2>Form Pemesanan hotel Skanida</h2></th>
+            </tr>
+            <tr>
+                <td>
+                    <table width="500" border="0" cellpadding = "1" cellspacing = "1" align="center">
+                        <tr height = "40">
+                            <td width = "200" valign="center">Tanggal Booking</td>
+                            <td width = "10" valign = "center" > : </td>
+                            <td><input type="date" name="tanggal" id="tanggal"></td>
+                        </tr>
+                        <tr height = "30">
+                            <td width = "200" valign="center">Nama Customer</td>
+                            <td width = "10" valign = "center" > : </td>
+                            <td><input type="text" size="10" name="namcus[]"></td>
+                        </tr>
+                      
+                        <tr height = "30">
+                            <td width = "200" valign="center">No identitas</td>
+                            <td width = "10" valign = "center" > : </td>
+                            <td><input type="text" size="40" name="noId[]"></td>
+                        </tr>
+                        <tr height = "30">
+                            <td width = "200" valign="center">Tipe kamar</td>
+                            <td width = "10" valign = "center" > : </td>
+                            <td><select name="type" id="">
+                                <option value="-" name="-" hidden>-</option>
+                                <option value="deluxe" name="deluxe">Deluxe</option>
+                                <option value="superior" names="superior">Superior</option>
+
+                            </select></td>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td width = "200" valign="center">Durasi menginap</td>
+                            <td width = "10" valign = "center" > : </td>
+                            <td><input type="text" size="40" name="durasi">malam</td>
+
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="2" >
+                                <input type="submit" value="Simpan" name="btnOk">
+                            </td>
+                            <td>
+                                <input type="reset" value="cancel" name="btnCancel">
+                            </td>
+                        </tr>
+
+                    </table>
+        </table>
+        <br>
+        <br>
+        <table width="500" border="0" cellpadding="0" cellspacing = "0" align="center">
+            <tr>
+                <td>
+                    <?php 
+                        if(isset($_POST["btnOk"])){
+                            hasil();
+                        }
+                    ?>
+                </td>
+            </tr>
+        </table>
+    </form
+</html>
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+
+            
+        
+          </div>
+    <div class="line"></div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../assets/script/prev.js"></script>
+</body>
+</html>

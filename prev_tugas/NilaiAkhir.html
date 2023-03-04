@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/prev.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Prompt:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navigasi flex">
+            <nav class="flex">
+              <!-- * -------------title name ------- -->
+              <div class="logo-name">
+                <h2>AY-ANO</h2>
+              </div>
+              <!-- * -------------title name ------- -->
+    
+              <div class="setting flex">
+                <ul class="nav-menu slide flex">
+                  <li>
+                    <a class="nav-link " href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="../projek sekolah.html">Tugas Projeck</a>
+                  </li>
+                </ul>
+                <div class="mode flex">
+                  <input type="checkbox" name="input-mode" id="input-mode" />
+                  <ion-icon class="icon-day" name="sunny-outline"></ion-icon>
+                  <ion-icon
+                    class="icon-night d-none"
+                    name="moon-outline"
+                  ></ion-icon>
+                </div>
+                <div class="menu flex">
+                  <input type="checkbox" name="input-menu" id="input-menu" />
+                  <ion-icon class="icon-on" name="grid-outline"></ion-icon>
+                  <ion-icon class="icon-off d-none" name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="header">
+            <h1>Nilai Akhir PHP</h1>
+          </div>
+          <div class="preview">
+            <div class="img_box_2">
+              <div class="tombol">
+                <button class="btn_left d-none" onclick="left()"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <button class="btn_right" onclick="right()"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+              </div>
+              <div class="con_img">
+                <img src="img/na2.png" alt="">
+                <img src="img/na3.png" alt="">
+
+              </div>
+            </div>
+            <div class="live_prev">
+              <a href="http://ayanoh.infinityfreeapp.com/handikaTugas/handika_putraII15/input.php?i=1" target="_blank" class="lp flex">Live Preview</a>
+            </div>
+            <div class="containerer">
+              <div class="content">
+                <h3 class="head_code">PHP input code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+                      <h1>HITUNG NILAI AKHIR SISWA</h1>
+                      <form action="output.php" method="post">
+                          <label for="nama">nama siwa :</label><br>
+                          <input type="text" name="nama" require><br>
+                          <label for="mapel">Matapelajaran</label><br>
+                          <input type="text" name="mapel" require><br>
+                          <label for="absen">nilai absen</label><br>
+                          <input type="number" require name="absen"><br>
+                          <label for="tugas">nilai absen</label><br>
+                          <input type="number" require name="tugas"><br>
+                          <label for="UTS">nilai absen</label><br>
+                          <input type="number" require name="UTS"><br>
+                          <label for="PAS">nilai PAS</label><br>
+                          <input type="number" require name="PAS"><br>
+                          <input type="submit" value="submit" name="submit">
+                      </form>
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <h3 class="head_code">PHP output code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+<?php 
+
+if(isset($_POST["submit"])){
+    $nama = $_POST["nama"];
+    $mapel = $_POST["mapel"];
+    $absen = $_POST["absen"];
+    $tugas = $_POST["tugas"];
+    $pts = $_POST["UTS"];
+    $pas = $_POST["PAS"];
+
+
+    $absen_ = floatval($absen) * 0.1;
+    $tugas_ = floatval($tugas) * 0.2;
+    $uts_ = floatval($pts) * 0.3;
+    $pas_ = floatval($pas) * 0.4;
+
+
+    $nilai_akhir = $absen_ + $tugas_ + $uts_ + $pas_;
+
+    $grade;
+
+    if($nilai_akhir >= 80){
+        $grade = "A";
+    }else if($nilai_akhir >= 70){
+        $grade = "B";
+    }else if($nilai_akhir >= 50){
+        $grade = "C";
+    }else if($nilai_akhir >= 40){
+        $grade = "D";
+    }else{
+        $grade = "E";
+    }
+}
+
+?>
+<h1>HITUNG NILAI AKHIR SISWA</h1><br>
+<h4>nama siswa : <?= $nama ?></h4>
+<h4>Matapelajaran : <?= $mapel ?></h4>
+<h4>nilai absen : <?= $absen_ ?></h4>
+<h4>nilai tugas : <?= $tugas_ ?></h4>
+<h4>nilai UTS : <?= $uts_ ?></h4>
+<h4>nilai PAS : <?= $pas_ ?></h4>
+
+<br>
+<h4><strong>nilai akhir : <?= $nilai_akhir?></strong></h4><br>
+<br>
+<h4><strong>Grade : <?= $grade?></strong></h4>
+
+
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+        
+          </div>
+    <div class="line"></div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../assets/script/prev.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+.prevFrame{
+    width: 90vw;
+    max-width: 400px;
+    height: 400px;
+}
+.main {
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+    display: flex;
+    height: max-content;
+}
+.header{
+    width: 90vw;
+    max-width: 500px;
+    color: black;
+    display: block;
+    position: relative;
+    margin-top: 60px;
+    font-family: "Ubuntu", sans-serif;
+    background-color: aqua;
+    padding-left: 10px;
+    padding: 10px;
+    font-size: 0.8em;
+}
+.preview{
+    width: 90%;
+    min-height: 720px;
+    font-family:  "Ubuntu", sans-serif;
+    overflow: hidden;
+    max-height: none;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img_box{
+    height: fit-content;
+    width: 500px;
+    max-width: 90vw;
+    position: relative;
+    z-index: 2;
+    background-color: black;
+    border: 5px solid aqua;
+}
+.img_box_2{
+    height: fit-content;
+    width: 500px;
+    max-width: 90vw;
+    position: relative;
+    z-index: 2;
+    background-color: black;
+    border: 5px solid aqua;
+    overflow-x: hidden;
+}
+.tombol{
+    position: absolute;
+    height: 70px;
+    width: 95%;
+    left: 2.5%;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+.tombol button{
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+    background-color: black;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.con_img{
+    display: flex;
+    width: 200%;
+}
+.next_img{
+    transform: translateX(-50%);
+}
+.img_box_2 img{
+    width: 50%;
+}
+.containerer{
+    width: 90vw;
+    max-width: 1400px;
+    max-height: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: max-content;
+}
+.img_box img{
+    width: 100%;
+}
+.coding{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-overflow: clip;
+}
+.box_code{
+    width: 90vw;
+    max-width: 500px;
+    font-size: 8px;
+    overflow-x: scroll;
+    border: 6px solid rgb(189, 189, 189);
+    scroll-behavior: smooth;
+}
+.box_code::-webkit-scrollbar{
+    display: block;
+    background-color: rgb(189, 189, 189);
+
+}
+.box_code::-webkit-scrollbar-thumb{
+    display: block;
+    background-color: rgb(215, 215, 215);
+}
+.codingan{
+    width: 1020px;
+}
+.lp{
+    width: 150px;
+    height: 50px;
+    background-color: violet;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    font-family: "Righteous", cursive;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.live_prev{
+    width: 500px;
+    max-width: 90vw;
+}
+.head_code{
+    width: 90vw;
+    margin-top: 20px;
+    background-color: rgb(189, 189, 189);
+    padding: 10px 20px 10px 20px;    
+    max-width: 500px;
+}
+.line{
+    height: 200px;
+    width: 10px;
+}

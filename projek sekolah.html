@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ============== font google ============= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Prompt:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ============== font google ============= -->
+
+    <!-- ============== css ============== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/galery.css" />
+
+    <!-- ============== css ============== -->
+
+    <title></title>
+  </head>
+  <body>
+    <div id="load" class="pre_load flex">
+      <div class="loader flex">
+        <h2>loading...</h2>
+      </div>
+      <span></span>
+    </div>
+    <div class="main flex">
+      <div class="navigasi flex">
+        <nav class="flex">
+
+          <!-- * title ----------------------- -->
+          <div class="logo-name">
+            <h2>AY-ANO</h2>
+          </div>
+          <!-- * title ----------------------- -->
+
+          <div class="setting flex">
+            <ul class="nav-menu slide flex">
+              <li>
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link active" href="galery.html">Tugas Project</a>
+              </li>
+            </ul>
+            <div class="mode flex">
+              <input type="checkbox" name="input-mode" id="input-mode" />
+              <ion-icon class="icon-day" name="sunny-outline"></ion-icon>
+              <ion-icon
+                class="icon-night d-none"
+                name="moon-outline"
+              ></ion-icon>
+            </div>
+            <div class="menu flex">
+              <input type="checkbox" name="input-menu" id="input-menu" />
+              <ion-icon class="icon-on" name="grid-outline"></ion-icon>
+              <ion-icon class="icon-off d-none" name="close-outline"></ion-icon>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- todo : =-=-=-=-=-=-=-=-=-=-=-=-= galery =-=-=-=-=-=-=-=-=-=- -->
+      <section id="Galery" class="container galery flex">
+        <span></span>
+        <span></span>
+        <span></span>
+        <header><h2>Galery</h2></header>
+        
+        <div class="container-card">
+            <ul class="list_tugas">
+              <li>
+                 <a href="prev_tugas/kalku.html">
+                  <h2>Kalkulator PHP</h2>
+                  <h5>14 February 2023</h5>
+                 </a>
+              </li>
+              <li>
+                <a href="prev_tugas/NilaiAkhir.html">
+                 <h2>Nilai Akhir PHP</h2>
+                 <h5>15 February 2023</h5>
+                </a>
+             </li>
+                <li>
+                  <a href="prev_tugas/FormPendaftaran.html">
+                  <h2>Form Pendaftaran HTML</h2>
+                  <h5>13 February 2023</h5>
+                  </a>
+               </li>
+                <li>
+                  <a href="prev_tugas/bookingHotel.html">
+                  <h2>Booking Hotel Skanida (lite)</h2>
+                  <h5>27 February 2023</h5>
+                  </a>
+              </li>
+            </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- * ====================================  script icon ================================  * -->
+    <!-- *  https://ionic.io/ionicons -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- * ====================================  script icon ================================  * -->
+    <!-- * ====================================== main  js  =================================  * -->
+    <script src="assets/script/galery.js"></script>
+    <!-- * ====================================== main  js  =================================  * -->
+  </body>
+</html>
