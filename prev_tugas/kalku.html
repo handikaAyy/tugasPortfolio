@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/prev.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Prompt:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navigasi flex">
+            <nav class="flex">
+              <!-- * -------------title name ------- -->
+              <div class="logo-name">
+                <h2>AY-ANO</h2>
+              </div>
+              <!-- * -------------title name ------- -->
+    
+              <div class="setting flex">
+                <ul class="nav-menu slide flex">
+                  <li>
+                    <a class="nav-link " href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="../projek sekolah.html">Tugas Projeck</a>
+                  </li>
+                </ul>
+                <div class="mode flex">
+                  <input type="checkbox" name="input-mode" id="input-mode" />
+                  <ion-icon class="icon-day" name="sunny-outline"></ion-icon>
+                  <ion-icon
+                    class="icon-night d-none"
+                    name="moon-outline"
+                  ></ion-icon>
+                </div>
+                <div class="menu flex">
+                  <input type="checkbox" name="input-menu" id="input-menu" />
+                  <ion-icon class="icon-on" name="grid-outline"></ion-icon>
+                  <ion-icon class="icon-off d-none" name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="header">
+            <h1>Kalkulator PeHaPe</h1>
+          </div>
+          <div class="preview">
+            <div class="img_box">
+              <img src="img/kalku.png" alt="">
+            </div>
+            <div class="live_prev">
+              <a href="http://ayanoh.infinityfreeapp.com/handikaTugas/kalku/" target="_blank" class="lp flex">Live Preview</a>
+            </div>
+            <div class="containerer">
+              <div class="content">
+                <h3 class="head_code">PHP code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+      <?php 
+      if(isset($_POST["submit"])){
+          $hasil = 0;
+          $bil1 = doubleval($_POST["bil1"]);
+          $bil2 = doubleval($_POST["bil2"]);
+          $operator = $_POST["op"];
+          switch($operator){
+              case "tambah" :
+                  $hasil = $bil1 + $bil2;
+                  break;
+              case "kurang"   :
+                  $hasil = $bil1 - $bil2;
+                  break;
+              case "kali"     :
+                  $hasil = $bil1 * $bil2;
+                  break;
+              case "bagi" :
+                  $hasil = $bil1 / $bil2;
+                  break;
+              default :
+                  $hasii = 0;
+          }
+        
+          
+      }
+      if(isset($_POST["reset"])){
+          $bil1 = "";
+          $bil2 = "";
+      }
+      
+      
+      ?>
+      
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Mynerve&family=Poppins:wght@200&family=Righteous&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
+          <title>kalkulator</title>
+      </head>
+      <body>
+          <div class="box">
+              <form action="" method="POST">
+              <button class="reset" type="submit"><ion-icon name="refresh-circle"></ion-icon></button>
+      
+                  <div class="head">
+                      <h2>kalku<span> lator</span></h2>
+                  </div>
+                  <div class="capt">
+                      <p>www.ahihihi.co.id</p>  
+                  </div>
+                  <input type="number" class="bil1" name="bil1" id="bil1" <?php 
+                  if(isset($bil1)){
+                      echo("value='".$bil1."'");
+                  }else{
+                      echo("value=''");
+      
+                  }
+                  ?>>
+                  <input type="number" class="bil2" name="bil2" id="bil2"
+                  <?php 
+                  if(isset($bil1)){
+                      echo("value='".$bil2."'");
+                  }else{
+                      echo("value=''");
+                  }
+                  ?>>
+                  <div class="operator">
+                      <select name="op" id="op" class="op">
+                          <option value="tambah">+</option>
+                          <option value="kurang">-</option>
+                          <option value="kali">x</option>
+                          <option value="bagi">:</option>
+                      </select>
+                      <button class="sub" name="submit" type="submit">HASIL</button>
+                  </div>
+      
+                  <input type="number" class="hasil" name="hasil" id="hasil" <?php 
+                 if(isset($hasil)){
+                   echo("value = '".$hasil."'");}else{
+                      echo("value = '000'");
+                   }
+                  ?>
+      
+              </form>
+          </div>
+          <script src="main.js"></script>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </body>
+      </html> 
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <h3 class="head_code">css code</h3>
+                <div class="box_code">
+                  <div class="codingan">
+                    <!-- todo --------------------------------------------------------------------------------------------------------------------------------------------------------------php -->
+    
+                    <xmp class="coding">
+                      *{
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    :root{
+                        --poppins:'Poppins', sans-serif;
+                        --righteaus: 'Righteous', cursive;
+                        --mynerve:'Mynerve', cursive;
+                    }
+                    
+                    body{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100vw;
+                        background-color: rgb(12, 12, 12);
+                        height: 100vh;
+                    }
+                    .anim{
+                        animation: bg 2s infinite;
+                    }
+                    @keyframes bg {
+                        0%{
+                            background-color: rgb(255, 0, 0);
+                        }
+                        10%{
+                            background-color: rgb(0, 255, 38);
+                    
+                        }
+                        20%{
+                            background-color: rgb(0, 255, 229);
+                    
+                        }
+                        30%{
+                            background-color: rgb(8, 0, 255);
+                    
+                        }
+                        40% {
+                            background-color: rgb(247, 0, 255);
+                    
+                        }
+                        50%{
+                            background-color: rgb(255, 0, 0);
+                        }
+                       
+                        60%{
+                            background-color: rgb(0, 255, 38);
+                    
+                        }
+                        70%{
+                            background-color: rgb(0, 255, 229);
+                    
+                        }
+                        80%{
+                            background-color: rgb(8, 0, 255);
+                    
+                        }
+                        90% {
+                            background-color: rgb(247, 0, 255);
+                    
+                        }
+                        100%{
+                            background-color: rgb(255, 0, 0);
+                        }
+                    }
+                    .box{
+                        width: 300px;
+                        height: 280px;
+                        max-width: 90vw;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        background-color: rgb(29, 29, 29);
+                        box-shadow: 0px 0px 5px rgba(207, 207, 207, 0.716);
+                        border-radius: 5px;
+                        color: #ffffff;
+                    }
+                    .reset{
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        border: none;
+                        font-size: 47px;
+                        position: absolute;
+                        left: -20px;
+                        background-color: rgb(29, 29, 29);
+                        color: rgb(255, 179, 0);
+                        top: -20px;
+                        animation: updown 2s infinite;
+                    }
+                    
+                    
+                    @keyframes updown {
+                        0%{
+                            transform: translateY(0px);
+                        }50%{
+                            transform: translateY(20px);
+                    
+                        }100%{
+                            transform: translateY(0px);
+                    
+                        }
+                    }
+                    .box > *{
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .head{
+                        height: 40px;
+                        font-family: var(--mynerve);
+                        display: flex;
+                        align-items: center;
+                        width: 90%;
+                        margin-top: 10px;
+                        justify-content: center;
+                    }
+                    .head h2{
+                        height: 90%;
+                        text-align: center;
+                    }
+                    .head h2 span{
+                        background-color: rgb(255, 179, 0);
+                        color: rgb(29, 29, 29);
+                        box-sizing: content-box;
+                        text-align: center;
+                        margin-left: 2px;
+                        padding-right: 5px;
+                        padding-right: 5px;
+                        border-radius: 3px;
+                    
+                    }
+                    .capt{
+                        height: 30px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        width: 90%;
+                        font-size: 0.9em;
+                        font-family: var(--mynerve);
+                    }
+                    .box form{
+                        height: fit-content;
+                        width: 100%;
+                    }
+                    input{
+                        width: 90%;
+                        font-size: 25px;
+                        padding-left: 10px;
+                        font-family: var(--righteaus);
+                        color: rgb(255, 179, 0);
+                        margin-top: 5px;
+                        border-radius: 5px;
+                        transition: 0.3s;
+                        background-color: rgb(29, 29, 29);
+                        height: 40px;
+                        border: 2px solid rgb(255, 179, 0);
+                    }
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                      }
+                    .operator{
+                        margin-top: 5px;
+                        width: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        
+                    }
+                    .operator button {
+                        width: 33%;
+                        height: 40px;
+                        border: none;
+                        border-radius: 5px;
+                        font-family: var(--righteaus);
+                    
+                        background-color: rgb(255, 179, 0);
+                    }
+                    .operator select{
+                        width: 65%;
+                        height: 40px;
+                        font-size: 25px;
+                        background-color: rgb(29, 29, 29);
+                        color: rgb(255, 179, 0);
+                        padding-left: 10px;
+                        border: 2px solid rgb(255, 179, 0);
+                        border-radius: 5px;
+                    
+                    }
+                    .operator select:focus{
+                        outline: none;
+                        background-color: rgb(255, 179, 0);
+                        color: rgb(29, 29, 29);
+                        border: none;    border: 2px solid rgb(255, 179, 0);
+                    }
+                    
+                     input:focus {
+                        outline: none;
+                        border: none;    border: 2px solid rgb(255, 179, 0);
+                        background-color: rgb(255, 179, 0);
+                        color: rgb(29, 29, 29);
+                        
+                    }
+                    input:active {
+                        outline: none;
+                        border: none;
+                        background-color: rgb(255, 179, 0);
+                        resize: none;    border: 1px solid rgb(255, 179, 0);
+                    }
+                    .hasil {
+                        color: rgb(29, 29, 29);
+                        background-color: rgb(255, 179, 0);
+                    }
+                    </xmp>
+                    <!-- todo ---------------------------------------------------------------------------------------------php -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+        
+          </div>
+    <div class="line"></div>
+
+    </div>
+</body>
+</html>
