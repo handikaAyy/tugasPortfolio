@@ -39,6 +39,9 @@
   top: 50;
   right: 0;
 }
+.list_tugas li a h2, .list_tugas li a h5{
+  font-size: medium;
+}
 .galery > * {
   z-index: 3;
 }
